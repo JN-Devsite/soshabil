@@ -7,6 +7,11 @@ use App\SoshalCall;
 
 class SoshalCallsController extends Controller
 {
+    public function index()
+    {
+        return view('home', ['soshalCalls' => auth()->user()->timeline()]);
+    }
+
     public function store()
     {
         $items = request()->validate([

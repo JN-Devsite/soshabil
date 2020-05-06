@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\SoshalCall;
 
 class User extends Authenticatable
 {
@@ -37,9 +38,26 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function follows()
+    {
+        return $this->belongsToMany(User::class, 'follows', 'user_id', 'following_user_id');
+    }
+
+    public function follow(User $user)
+    {
+        return $this->follows()->save($user);
+    }
+
     public function timeline()
     {
-        return SoshalCall::where('user_id', $this->id)->latest()->get();
+        $friends = $this->follows()->pluck('id');
+
+        return SoshalCall::whereIn('user_id', $friends)->orWhere('user_id', $this->id)->latest()->get();
+    }
+
+    public function soshals()
+    {
+        return $this->hasMany(SoshalCall::class);
     }
 
     public function getAvatarAttribute()

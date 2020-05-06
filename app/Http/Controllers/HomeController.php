@@ -26,6 +26,6 @@ class HomeController extends Controller
     {
         // $soshalCalls = SoshalCall::latest()->get();
 
-        return view('home', ['soshalCalls' => auth()->user()->timeline()]);
+        // return view('home', ['soshalCalls' => auth()->user()->timeline()]);
     }
 }
