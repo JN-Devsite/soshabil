@@ -1,23 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="md:flex md:justify-between">
+    <div class="md:w-1/7">
+        @include('sidebar-links')
+    </div>
+    <div class="flex-1 soshalbox">
+        @include('publish-panel')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
+        <div class="mb-2 rounded-md bg-black bg-opacity-25 border-white rounded-lg p-2 md:mx-5">
+            <div class="mb-2 rounded-md w-full bg-black bg-opacity-50 p-1">
+                <h3 class="uppercase font-bold">Soshalcalls</h3>
             </div>
+            @foreach($soshalCalls as $soshalCall)
+                @include('soshalcalls')
+            @endforeach
         </div>
+    </div>
+    <div class="md:w-1/6">
+        @include('friend-list')
     </div>
 </div>
 @endsection
