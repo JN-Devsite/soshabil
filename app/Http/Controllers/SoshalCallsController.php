@@ -9,7 +9,7 @@ class SoshalCallsController extends Controller
 {
     public function index()
     {
-        return view('home', ['soshalCalls' => auth()->user()->timeline()]);
+        return view('soshals.index', ['soshalCalls' => auth()->user()->timeline()]);
     }
 
     public function store()

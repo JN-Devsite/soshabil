@@ -1,4 +1,8 @@
 <?php
+// DB::listen(function ($query) {
+//     var_dump($query->sql, $query->bindings);
+// }
+// );
 
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +25,8 @@ Route::middleware('auth')->group(function() {
     Route::get('/soshals', 'SoshalCallsController@index')->name('home');
     Route::post('/soshals', 'SoshalCallsController@store');
 });
+
+Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
 
 // Route::get('/home', 'HomeController@index')->name('home');
 

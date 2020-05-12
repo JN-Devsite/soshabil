@@ -5368,7 +5368,7 @@ video {
 }
 
 .rounded-full {
-  border-radius: 9999px;
+  border-radius: 100%;
 }
 
 .rounded-t-none {
@@ -5472,23 +5472,23 @@ video {
 }
 
 .rounded-t-full {
-  border-top-left-radius: 9999px;
-  border-top-right-radius: 9999px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
 }
 
 .rounded-r-full {
-  border-top-right-radius: 9999px;
-  border-bottom-right-radius: 9999px;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
 }
 
 .rounded-b-full {
-  border-bottom-right-radius: 9999px;
-  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
 }
 
 .rounded-l-full {
-  border-top-left-radius: 9999px;
-  border-bottom-left-radius: 9999px;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
 }
 
 .rounded-tl-none {
@@ -5572,19 +5572,19 @@ video {
 }
 
 .rounded-tl-full {
-  border-top-left-radius: 9999px;
+  border-top-left-radius: 100%;
 }
 
 .rounded-tr-full {
-  border-top-right-radius: 9999px;
+  border-top-right-radius: 100%;
 }
 
 .rounded-br-full {
-  border-bottom-right-radius: 9999px;
+  border-bottom-right-radius: 100%;
 }
 
 .rounded-bl-full {
-  border-bottom-left-radius: 9999px;
+  border-bottom-left-radius: 100%;
 }
 
 .border-solid {
@@ -23788,7 +23788,7 @@ video {
   }
 
   .sm\:rounded-full {
-    border-radius: 9999px;
+    border-radius: 100%;
   }
 
   .sm\:rounded-t-none {
@@ -23892,23 +23892,23 @@ video {
   }
 
   .sm\:rounded-t-full {
-    border-top-left-radius: 9999px;
-    border-top-right-radius: 9999px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
   }
 
   .sm\:rounded-r-full {
-    border-top-right-radius: 9999px;
-    border-bottom-right-radius: 9999px;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
   }
 
   .sm\:rounded-b-full {
-    border-bottom-right-radius: 9999px;
-    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
   }
 
   .sm\:rounded-l-full {
-    border-top-left-radius: 9999px;
-    border-bottom-left-radius: 9999px;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
   }
 
   .sm\:rounded-tl-none {
@@ -23992,19 +23992,19 @@ video {
   }
 
   .sm\:rounded-tl-full {
-    border-top-left-radius: 9999px;
+    border-top-left-radius: 100%;
   }
 
   .sm\:rounded-tr-full {
-    border-top-right-radius: 9999px;
+    border-top-right-radius: 100%;
   }
 
   .sm\:rounded-br-full {
-    border-bottom-right-radius: 9999px;
+    border-bottom-right-radius: 100%;
   }
 
   .sm\:rounded-bl-full {
-    border-bottom-left-radius: 9999px;
+    border-bottom-left-radius: 100%;
   }
 
   .sm\:border-solid {
@@ -42209,7 +42209,7 @@ video {
   }
 
   .md\:rounded-full {
-    border-radius: 9999px;
+    border-radius: 100%;
   }
 
   .md\:rounded-t-none {
@@ -42313,23 +42313,23 @@ video {
   }
 
   .md\:rounded-t-full {
-    border-top-left-radius: 9999px;
-    border-top-right-radius: 9999px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
   }
 
   .md\:rounded-r-full {
-    border-top-right-radius: 9999px;
-    border-bottom-right-radius: 9999px;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
   }
 
   .md\:rounded-b-full {
-    border-bottom-right-radius: 9999px;
-    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
   }
 
   .md\:rounded-l-full {
-    border-top-left-radius: 9999px;
-    border-bottom-left-radius: 9999px;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
   }
 
   .md\:rounded-tl-none {
@@ -42413,19 +42413,19 @@ video {
   }
 
   .md\:rounded-tl-full {
-    border-top-left-radius: 9999px;
+    border-top-left-radius: 100%;
   }
 
   .md\:rounded-tr-full {
-    border-top-right-radius: 9999px;
+    border-top-right-radius: 100%;
   }
 
   .md\:rounded-br-full {
-    border-bottom-right-radius: 9999px;
+    border-bottom-right-radius: 100%;
   }
 
   .md\:rounded-bl-full {
-    border-bottom-left-radius: 9999px;
+    border-bottom-left-radius: 100%;
   }
 
   .md\:border-solid {
@@ -60630,7 +60630,7 @@ video {
   }
 
   .lg\:rounded-full {
-    border-radius: 9999px;
+    border-radius: 100%;
   }
 
   .lg\:rounded-t-none {
@@ -60734,23 +60734,23 @@ video {
   }
 
   .lg\:rounded-t-full {
-    border-top-left-radius: 9999px;
-    border-top-right-radius: 9999px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
   }
 
   .lg\:rounded-r-full {
-    border-top-right-radius: 9999px;
-    border-bottom-right-radius: 9999px;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
   }
 
   .lg\:rounded-b-full {
-    border-bottom-right-radius: 9999px;
-    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
   }
 
   .lg\:rounded-l-full {
-    border-top-left-radius: 9999px;
-    border-bottom-left-radius: 9999px;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
   }
 
   .lg\:rounded-tl-none {
@@ -60834,19 +60834,19 @@ video {
   }
 
   .lg\:rounded-tl-full {
-    border-top-left-radius: 9999px;
+    border-top-left-radius: 100%;
   }
 
   .lg\:rounded-tr-full {
-    border-top-right-radius: 9999px;
+    border-top-right-radius: 100%;
   }
 
   .lg\:rounded-br-full {
-    border-bottom-right-radius: 9999px;
+    border-bottom-right-radius: 100%;
   }
 
   .lg\:rounded-bl-full {
-    border-bottom-left-radius: 9999px;
+    border-bottom-left-radius: 100%;
   }
 
   .lg\:border-solid {
@@ -79051,7 +79051,7 @@ video {
   }
 
   .xl\:rounded-full {
-    border-radius: 9999px;
+    border-radius: 100%;
   }
 
   .xl\:rounded-t-none {
@@ -79155,23 +79155,23 @@ video {
   }
 
   .xl\:rounded-t-full {
-    border-top-left-radius: 9999px;
-    border-top-right-radius: 9999px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
   }
 
   .xl\:rounded-r-full {
-    border-top-right-radius: 9999px;
-    border-bottom-right-radius: 9999px;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
   }
 
   .xl\:rounded-b-full {
-    border-bottom-right-radius: 9999px;
-    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
   }
 
   .xl\:rounded-l-full {
-    border-top-left-radius: 9999px;
-    border-bottom-left-radius: 9999px;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
   }
 
   .xl\:rounded-tl-none {
@@ -79255,19 +79255,19 @@ video {
   }
 
   .xl\:rounded-tl-full {
-    border-top-left-radius: 9999px;
+    border-top-left-radius: 100%;
   }
 
   .xl\:rounded-tr-full {
-    border-top-right-radius: 9999px;
+    border-top-right-radius: 100%;
   }
 
   .xl\:rounded-br-full {
-    border-bottom-right-radius: 9999px;
+    border-bottom-right-radius: 100%;
   }
 
   .xl\:rounded-bl-full {
-    border-bottom-left-radius: 9999px;
+    border-bottom-left-radius: 100%;
   }
 
   .xl\:border-solid {

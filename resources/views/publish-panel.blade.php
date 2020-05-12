@@ -2,7 +2,7 @@
     <form action="/soshals" method="post">
         <div class="mb-2 rounded-md w-full bg-black bg-opacity-50 border-white rounded-md border-2 p-1 flex items-center">
             <div class="mr-2">
-                <img src="{{ auth()->user()->avatar }}" class="rounded-full mr-2 border-white border-2" alt="{{ auth()->user()->name }}">
+                <img src="{{ auth()->user()->avatar }}" class="rounded-full mr-2 border-white border-2 avatar-40" alt="{{ auth()->user()->name }}">
             </div>
             <div class="">
                 <h3 class="font-bold uppercase"> Make a Soshalcall</h3>

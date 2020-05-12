@@ -4,10 +4,10 @@ $strBody = strlen($soshalCall->body) > $strCnt ? substr($soshalCall->body, 0, $s
 @endphp
 <div class="flex">
     <div class="mr-1 flex-shrink-0">
-        <img src="{{ $soshalCall->user->avatar}}" class="rounded-full mr-2 border-white border-2" alt="">
+        <a href="{{ route('profile', $soshalCall->user) }}"><img src="{{ $soshalCall->user->avatar}}" class="rounded-full mr-2 border-white border-2 avatar-60" alt=""></a>
     </div>
     <div class="">
-        <h4 class="font-bold">{{ $soshalCall->user->name}}</h4>
+        <h4 class="font-bold"><a href="{{ route('profile', $soshalCall->user) }}">{{ $soshalCall->user->name}}</a></h4>
         <p class="text-sm">
             {{ $strBody }}
         </p>

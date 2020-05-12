@@ -32,6 +32,24 @@
         .soshalbox {
             max-width: 800px;
         }
+
+        .profile-avatar {
+            width: 180px;
+            height: auto;
+            /*top: calc(50% - 90px);*/
+            top: 65px;
+            left: calc(50% - 90px);
+        }
+
+        .avatar-40 {
+            width: 40px;
+            height: auto;
+        }
+
+        .avatar-60 {
+            width: 60px;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -44,7 +62,24 @@
 
         <section class="px-10 py-2">
             <main class="container mx-auto">
-                @yield('content')
+                <div class="md:flex md:justify-between">
+                    @if(auth()->check())
+                    <div class="md:w-1/7">
+                        @include('sidebar-links')
+                    </div>
+                    @endif
+                    <div class="flex-1 soshalbox">
+                        @yield('content')
+                    </div>
+                    @if(auth()->check())
+                    <div class="md:w-1/6">
+                        @include('friend-list')
+                    </div>
+                    @endif
+                </div>
+
+
+
             </main>
         </section>
 
