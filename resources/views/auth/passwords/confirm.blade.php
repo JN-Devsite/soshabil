@@ -1,23 +1,21 @@
-@extends('layouts.app')
+<x-master>
+<div class="container mx-auto px-6 py-4">
+    <div class="justify-content-center">
+        <div class="">
+            <div class="">
+                <h3 class="font-bold uppercase">{{ __('Confirm Password') }}</h3>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Confirm Password') }}</div>
-
-                <div class="card-body">
-                    {{ __('Please confirm your password before continuing.') }}
+                <div class="w-64">
+                    <span class="font-bold uppercase text-xs">{{ __('Please confirm your password before continuing.') }}</span>
 
                     <form method="POST" action="{{ route('password.confirm') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="password" class="font-bold uppercase text-xs">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" class="bg-transparent border-white rounded-md border-2 mb-1 w-full @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -27,14 +25,15 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="">
+                            <div class="">
+                                <button type="submit" class="sosha-bgcolor rounded-md uppercase font-bold text-sm p-2 mb-1 w-full">
                                     {{ __('Confirm Password') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <br>
+                                    <a class="sosha-bgcolor rounded-md uppercase font-bold text-sm p-2 mb-1 w-full" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
@@ -46,4 +45,4 @@
         </div>
     </div>
 </div>
-@endsection
+</x-master>
