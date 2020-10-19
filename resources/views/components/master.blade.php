@@ -37,8 +37,11 @@
             width: 180px;
             height: auto;
             /*top: calc(50% - 90px);*/
-            top: 65px;
-            left: calc(50% - 90px);
+            /*top: 65px;*/
+            /*left: calc(50% - 90px);*/
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%) translateY(50%);
         }
 
         .avatar-40 {

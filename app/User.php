@@ -9,7 +9,7 @@ use App\SoshalCall;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, Followable;
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'username', 'email', 'password',
     ];
 
     /**
@@ -38,16 +38,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function follows()
-    {
-        return $this->belongsToMany(User::class, 'follows', 'user_id', 'following_user_id');
-    }
-
-    public function follow(User $user)
-    {
-        return $this->follows()->save($user);
-    }
-
     public function timeline()
     {
         $friends = $this->follows()->pluck('id');
@@ -57,7 +47,7 @@ class User extends Authenticatable
 
     public function soshals()
     {
-        return $this->hasMany(SoshalCall::class);
+        return $this->hasMany(SoshalCall::class)->latest();
     }
 
     public function getAvatarAttribute()
@@ -65,8 +55,15 @@ class User extends Authenticatable
         return "https://i.pravatar.cc/200?u=" . $this->email;
     }
 
-    public function getRouteKeyName()
+    public function path($append = '')
     {
-        return 'name';
+        $path = route('profile', $this->username);
+
+        return $append ? "{$path}/{$append}" : $path;
     }
+
+    // public function getRouteKeyName()    // This can be done in the route in Laravel 7
+    // {
+    //     return 'name';
+    // }
 }

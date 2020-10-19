@@ -23,6 +23,6 @@ class SoshalCallsController extends Controller
             'body' => $items['body']
         ]);
 
-        return redirect('/home');
+        return redirect()->route('home');
     }
 }

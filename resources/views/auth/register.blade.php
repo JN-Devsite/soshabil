@@ -23,6 +23,20 @@
                             </div>
                         </div>
 
+                        <div class="">
+                            <label for="username" class="font-bold uppercase text-xs">User Name</label>
+
+                            <div class="col-md-6">
+                                <input id="username" type="text" class="bg-transparent border-white rounded-md border-2 w-full mb-1 @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+
+                                @error('username')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="email" class="font-bold uppercase text-xs">{{ __('E-Mail Address') }}</label>
 

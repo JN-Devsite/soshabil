@@ -13,4 +13,4 @@ $strBody = strlen($soshalCall->body) > $strCnt ? substr($soshalCall->body, 0, $s
         </p>
     </div>
 </div>
-<hr class="my-2 border-dashed border-1">
+<hr class=" {{ $loop->last ? 'border-0' : 'my-2 border-dashed border-1' }}">

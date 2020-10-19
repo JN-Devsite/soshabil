@@ -24,10 +24,17 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function() {
     Route::get('/soshals', 'SoshalCallsController@index')->name('home');
     Route::post('/soshals', 'SoshalCallsController@store');
+    Route::post('/profiles/{user:username}/follow', 'FollowsController@store');
+    Route::get('/profiles/{user:username}/edit', 'ProfilesController@edit')->middleware('can:edit,user');
+    Route::patch('/profiles/{user:username}', 'ProfilesController@update');
 });
 
-Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
+Route::get('/profiles/{user:username}', 'ProfilesController@show')->name('profile');
+
+
+
+// Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
+
 
 // Route::get('/home', 'HomeController@index')->name('home');
-
 Auth::routes();

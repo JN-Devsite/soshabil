@@ -8,8 +8,11 @@
                         <p class="text-xs mb-2">Joined: {{ $user->created_at->diffForHumans() }}</p>
                     </div>
                     <div class="m-2">
-                        <a href="" class="sosha-bgcolor rounded-md uppercase font-bold text-sm p-2 mb-1">Edit Profile</a>
-                        <a href="" class="sosha-bgcolor rounded-md uppercase font-bold text-sm p-2 mb-1">Follow</a>
+                        {{-- @if(current_user()->is($user)) --}}
+                        @can('edit', $user)
+                            <a href="{{ $user->path('edit') }}" class="sosha-bgcolor rounded-md uppercase font-bold text-sm p-2 mb-1">Edit Profile</a>
+                        @endcan
+                        <x-follow-button :user=$user />
                     </div>
                 </div>
 
